@@ -7,6 +7,8 @@ import SkillsCarousel from "./components/SkillsCarousel";
 import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import SpotlightSection from "./components/SpotlightSection";
+import CareerJourneySection from "./components/CareerJourneySection";
+import QuoteSection from "./components/QuoteSection";
 import EducationSection from "./components/EducationSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -15,7 +17,7 @@ import portfolioData from "./data/mock";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-slate-900">
       <BrowserRouter>
         <Navigation />
         
@@ -38,6 +40,14 @@ function App() {
           
           <section id="achievements">
             <SpotlightSection spotlights={portfolioData.spotlight} />
+          </section>
+          
+          <section id="journey">
+            <CareerJourneySection journey={portfolioData.careerJourney} />
+          </section>
+          
+          <section id="inspiration">
+            <QuoteSection quote={portfolioData.quote} />
           </section>
           
           <section id="education">

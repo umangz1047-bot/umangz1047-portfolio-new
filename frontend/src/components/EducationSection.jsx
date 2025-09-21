@@ -38,13 +38,13 @@ const EducationSection = ({ education }) => {
   });
 
   return (
-    <section className="py-20 bg-gradient-to-b from-indigo-50/50 to-purple-50/30">
+    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="container mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-black text-slate-800 mb-4">Educational Background</h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Strong academic foundation in computer science, networking, and security - perfectly aligned for Application Support Engineering
+          <h2 className="text-4xl font-black text-white mb-4">Educational Foundation</h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Comprehensive academic background spanning computer science, networking, and security - building blocks for versatile technology expertise
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const EducationSection = ({ education }) => {
               return (
                 <Card 
                   key={edu.id}
-                  className="bg-white/60 backdrop-blur-md border border-white/40 hover:border-blue-300/60 hover:bg-white/70 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group shadow-lg"
+                  className="bg-slate-800/60 backdrop-blur-md border border-slate-700/50 hover:border-slate-600 hover:bg-slate-700/60 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group shadow-lg"
                 >
                   <CardContent className="p-8">
                     {/* Header with icon and type */}
@@ -72,10 +72,10 @@ const EducationSection = ({ education }) => {
                         >
                           {edu.type === 'degree' ? 'Degree' : 'Certificate'}
                         </Badge>
-                        <h3 className="text-xl font-bold text-slate-800 leading-tight mb-1">
+                        <h3 className="text-xl font-bold text-white leading-tight mb-1">
                           {edu.degree}
                         </h3>
-                        <h4 className="text-lg text-blue-600 font-semibold mb-2">
+                        <h4 className="text-lg text-blue-400 font-semibold mb-2">
                           {edu.field}
                         </h4>
                       </div>
@@ -83,13 +83,13 @@ const EducationSection = ({ education }) => {
 
                     {/* Institution and location */}
                     <div className="mb-4">
-                      <div className="text-lg text-slate-700 font-medium mb-2">{edu.institution}</div>
-                      <div className="flex items-center gap-4 text-sm text-slate-500 mb-3">
-                        <div className="flex items-center gap-1 bg-slate-100/60 backdrop-blur-sm px-2 py-1 rounded-full">
+                      <div className="text-lg text-gray-300 font-medium mb-2">{edu.institution}</div>
+                      <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                        <div className="flex items-center gap-1 bg-slate-700/50 backdrop-blur-sm px-2 py-1 rounded-full">
                           <Calendar size={14} />
                           <span>{edu.period}</span>
                         </div>
-                        <div className="flex items-center gap-1 bg-slate-100/60 backdrop-blur-sm px-2 py-1 rounded-full">
+                        <div className="flex items-center gap-1 bg-slate-700/50 backdrop-blur-sm px-2 py-1 rounded-full">
                           <MapPin size={14} />
                           <span>{edu.location}</span>
                         </div>
@@ -98,13 +98,13 @@ const EducationSection = ({ education }) => {
 
                     {/* Specializations */}
                     <div className="mb-4">
-                      <h5 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-3">Key Areas</h5>
+                      <h5 className="text-sm font-semibold text-gray-300 uppercase tracking-wide mb-3">Key Areas</h5>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {edu.specializations.map((spec, specIndex) => (
                           <Badge 
                             key={specIndex}
                             variant="outline" 
-                            className="border-slate-300/50 bg-slate-50/50 backdrop-blur-sm text-slate-700 hover:border-blue-400/60 hover:bg-blue-50/60 hover:text-blue-700 transition-all duration-300"
+                            className="border-slate-600/50 bg-slate-700/30 backdrop-blur-sm text-gray-300 hover:border-slate-500/60 hover:bg-slate-600/40 hover:text-white transition-all duration-300"
                           >
                             {spec}
                           </Badge>
@@ -112,16 +112,16 @@ const EducationSection = ({ education }) => {
                       </div>
                     </div>
 
-                    {/* Relevance to Application Support */}
+                    {/* Relevance to technology roles */}
                     <div className="mb-6">
-                      <h5 className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-2">Application Support Relevance</h5>
-                      <p className="text-slate-600 text-sm leading-relaxed">
+                      <h5 className="text-sm font-semibold text-blue-400 uppercase tracking-wide mb-2">Technology Relevance</h5>
+                      <p className="text-gray-300 text-sm leading-relaxed">
                         {edu.relevance}
                       </p>
                     </div>
 
                     {/* Progress bar effect */}
-                    <div className="w-full bg-slate-200/50 backdrop-blur-sm rounded-full h-2 overflow-hidden">
+                    <div className="w-full bg-slate-700/50 backdrop-blur-sm rounded-full h-2 overflow-hidden">
                       <div 
                         className={`bg-gradient-to-r ${colorGradient} h-2 rounded-full w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 shadow-sm`}
                         style={{ animationDelay: `${index * 200}ms` }}
@@ -136,14 +136,14 @@ const EducationSection = ({ education }) => {
 
         {/* Education summary */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-indigo-500/10 backdrop-blur-sm border border-blue-200/30 rounded-2xl p-8 max-w-4xl mx-auto shadow-lg">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">Complete Technical Foundation</h3>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              My educational background provides a comprehensive foundation combining computer science fundamentals, 
-              advanced networking expertise, and security analysis skills - perfectly suited for modern Application Support Engineering roles.
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-md border border-slate-600/50 rounded-2xl p-8 max-w-4xl mx-auto shadow-xl">
+            <h3 className="text-2xl font-bold text-white mb-4">Multi-Domain Technical Foundation</h3>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              My educational journey spans computer science fundamentals, advanced networking expertise, and security analysis - 
+              creating a versatile foundation perfect for emerging technology roles including networking, technical support, and AI applications.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-6">
-              <Badge className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2">
+              <Badge className="bg-gradient-to-r from-purple-500 to-violet-600 text-white px-4 py-2">
                 Computer Science Engineering
               </Badge>
               <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2">

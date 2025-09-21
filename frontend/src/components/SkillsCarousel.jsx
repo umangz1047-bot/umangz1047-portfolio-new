@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
-import { Settings, Users, Network, Crown, TrendingUp, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Lightbulb, BookOpen, Award, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 const iconMap = {
-  Settings,
-  Users,
-  Network,
-  Crown,
-  TrendingUp
+  Lightbulb,
+  BookOpen,
+  Award,
+  Users
 };
 
 const SkillsCarousel = ({ coreCompetencies }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerView = 3;
+  const itemsPerView = 2;
   const maxIndex = Math.max(0, coreCompetencies.length - itemsPerView);
 
   const nextSlide = () => {
@@ -25,13 +24,13 @@ const SkillsCarousel = ({ coreCompetencies }) => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-slate-50">
+    <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
-        {/* Glassmorphism section header */}
+        {/* Section header */}
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-4xl font-black text-slate-800 mb-2">Core Competencies</h2>
-            <p className="text-slate-600 text-lg">Key strengths that drive application support excellence</p>
+            <h2 className="text-4xl font-black text-white mb-2">Core Competencies</h2>
+            <p className="text-gray-300 text-lg">Versatile strengths that drive adaptable technology excellence</p>
           </div>
           
           <div className="flex gap-2">
@@ -40,7 +39,7 @@ const SkillsCarousel = ({ coreCompetencies }) => {
               size="sm"
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className="border-blue-300/50 bg-white/50 backdrop-blur-sm text-blue-600 hover:bg-blue-50 hover:border-blue-400 disabled:opacity-30 rounded-full w-10 h-10 p-0 shadow-sm"
+              className="border-slate-600 bg-slate-800/50 backdrop-blur-sm text-gray-300 hover:bg-slate-700/50 hover:border-slate-500 hover:text-white disabled:opacity-30 rounded-full w-10 h-10 p-0 shadow-sm"
             >
               <ChevronLeft size={20} />
             </Button>
@@ -49,42 +48,42 @@ const SkillsCarousel = ({ coreCompetencies }) => {
               size="sm"
               onClick={nextSlide}
               disabled={currentIndex >= maxIndex}
-              className="border-blue-300/50 bg-white/50 backdrop-blur-sm text-blue-600 hover:bg-blue-50 hover:border-blue-400 disabled:opacity-30 rounded-full w-10 h-10 p-0 shadow-sm"
+              className="border-slate-600 bg-slate-800/50 backdrop-blur-sm text-gray-300 hover:bg-slate-700/50 hover:border-slate-500 hover:text-white disabled:opacity-30 rounded-full w-10 h-10 p-0 shadow-sm"
             >
               <ChevronRight size={20} />
             </Button>
           </div>
         </div>
 
-        {/* Skills carousel with glassmorphism */}
+        {/* Skills carousel */}
         <div className="relative overflow-hidden">
           <div 
-            className="flex transition-transform duration-500 ease-in-out gap-6"
+            className="flex transition-transform duration-500 ease-in-out gap-8"
             style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
           >
-            {coreCompetencies.map((skill) => {
-              const IconComponent = iconMap[skill.icon];
+            {coreCompetencies.map((competency) => {
+              const IconComponent = iconMap[competency.icon];
               return (
-                <div key={skill.id} className="min-w-0 flex-shrink-0" style={{ width: `${100 / itemsPerView}%` }}>
-                  <Card className="bg-white/60 backdrop-blur-md border border-white/40 hover:border-blue-300/60 hover:bg-white/70 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group h-full shadow-lg">
+                <div key={competency.id} className="min-w-0 flex-shrink-0" style={{ width: `${100 / itemsPerView}%` }}>
+                  <Card className="bg-slate-800/60 backdrop-blur-md border border-slate-700/50 hover:border-slate-600 hover:bg-slate-700/60 transition-all duration-300 transform hover:scale-105 hover:shadow-xl group h-full shadow-lg">
                     <CardContent className="p-8">
                       <div className="flex items-center gap-4 mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center group-hover:from-blue-600 group-hover:to-indigo-700 transition-all duration-300 shadow-lg">
+                        <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center group-hover:from-blue-700 group-hover:to-purple-700 transition-all duration-300 shadow-lg">
                           {IconComponent && <IconComponent size={32} className="text-white" />}
                         </div>
                         <div>
-                          <h3 className="text-xl font-bold text-slate-800 mb-1">{skill.title}</h3>
-                          <div className="text-blue-600 font-semibold text-sm">{skill.metrics}</div>
+                          <h3 className="text-xl font-bold text-white mb-1">{competency.title}</h3>
+                          <div className="text-blue-400 font-semibold text-sm">{competency.metrics}</div>
                         </div>
                       </div>
                       
-                      <p className="text-slate-600 leading-relaxed mb-6">
-                        {skill.description}
+                      <p className="text-gray-300 leading-relaxed mb-6">
+                        {competency.description}
                       </p>
                       
-                      {/* Progress bar effect with glassmorphism */}
-                      <div className="w-full bg-slate-200/50 backdrop-blur-sm rounded-full h-2 overflow-hidden">
-                        <div className="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 shadow-sm"></div>
+                      {/* Progress bar effect */}
+                      <div className="w-full bg-slate-700/50 backdrop-blur-sm rounded-full h-2 overflow-hidden">
+                        <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full w-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 shadow-sm"></div>
                       </div>
                     </CardContent>
                   </Card>
@@ -94,7 +93,7 @@ const SkillsCarousel = ({ coreCompetencies }) => {
           </div>
         </div>
 
-        {/* Dots indicator with glassmorphism */}
+        {/* Dots indicator */}
         <div className="flex justify-center mt-8 gap-2">
           {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
@@ -102,8 +101,8 @@ const SkillsCarousel = ({ coreCompetencies }) => {
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex 
-                  ? 'bg-blue-500 scale-125 shadow-lg' 
-                  : 'bg-slate-300/60 backdrop-blur-sm hover:bg-slate-400/60'
+                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 scale-125 shadow-lg' 
+                  : 'bg-slate-600/60 backdrop-blur-sm hover:bg-slate-500/60'
               }`}
             />
           ))}
