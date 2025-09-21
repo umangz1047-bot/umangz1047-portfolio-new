@@ -5,7 +5,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { useToast } from '../hooks/use-toast';
-import { Mail, Phone, MapPin, Linkedin, Send, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Send, CheckCircle, Zap, Brain } from 'lucide-react';
 
 const ContactSection = ({ contactInfo }) => {
   const [formData, setFormData] = useState({
@@ -60,97 +60,112 @@ const ContactSection = ({ contactInfo }) => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-purple-50/30 to-slate-100/50" id="contact">
+    <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900" id="contact">
       <div className="container mx-auto px-6">
-        {/* Glassmorphism section header */}
+        {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-black text-slate-800 mb-4">Let's Connect</h2>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Ready to discuss how my application support expertise can benefit your team? Let's start the conversation.
+          <h2 className="text-4xl font-black text-white mb-4">Let's Build Something Amazing</h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Ready to bring adaptable tech expertise to your team? Whether it's networking, technical support, or exploring AI opportunities - let's connect.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info with glassmorphism */}
+          {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">Get in Touch</h3>
-              <p className="text-slate-600 mb-8 leading-relaxed">
-                Whether you're looking for an experienced Application Support Engineer, technical problem solver, or customer success expert, 
-                I'm here to discuss how we can create exceptional outcomes together.
+              <h3 className="text-2xl font-bold text-white mb-6">Multiple Ways to Connect</h3>
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                Whether you're seeking a versatile technologist for networking roles, technical support positions, 
+                or entry-level AI opportunities, I'm excited to discuss how my adaptable skills can contribute to your team's success.
               </p>
             </div>
 
-            {/* Contact details with glassmorphism */}
+            {/* Contact details */}
             <div className="space-y-6">
-              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm border border-white/40 p-4 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="flex items-center gap-4 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-4 rounded-2xl shadow-lg hover:bg-slate-700/60 transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Mail size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-slate-500 text-sm font-medium">Email</div>
-                  <div className="text-slate-800 font-semibold">{contactInfo.email}</div>
+                  <div className="text-gray-400 text-sm font-medium">Email</div>
+                  <div className="text-white font-semibold">{contactInfo.email}</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm border border-white/40 p-4 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="flex items-center gap-4 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-4 rounded-2xl shadow-lg hover:bg-slate-700/60 transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Linkedin size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-slate-500 text-sm font-medium">LinkedIn</div>
-                  <div className="text-slate-800 font-semibold">Professional Profile</div>
+                  <div className="text-gray-400 text-sm font-medium">LinkedIn</div>
+                  <div className="text-white font-semibold">Professional Profile</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm border border-white/40 p-4 rounded-2xl shadow-sm">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="flex items-center gap-4 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-4 rounded-2xl shadow-lg hover:bg-slate-700/60 transition-colors">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                   <MapPin size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-slate-500 text-sm font-medium">Location</div>
-                  <div className="text-slate-800 font-semibold">{contactInfo.location}</div>
+                  <div className="text-gray-400 text-sm font-medium">Location</div>
+                  <div className="text-white font-semibold">{contactInfo.location}</div>
                 </div>
               </div>
             </div>
 
-            {/* Call to action box with glassmorphism */}
-            <Card className="bg-gradient-to-br from-blue-500/90 to-indigo-600/90 backdrop-blur-sm border border-blue-400/30 shadow-xl">
+            {/* Opportunity areas */}
+            <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-md border border-slate-600/50 shadow-xl">
               <CardContent className="p-6">
-                <h4 className="text-white font-bold text-lg mb-2">Ready for Application Support Excellence?</h4>
-                <p className="text-blue-100 mb-4">Let's discuss your technical challenges and growth opportunities.</p>
-                <Button 
-                  variant="secondary" 
-                  className="bg-white/90 backdrop-blur-sm text-blue-700 hover:bg-white font-semibold w-full shadow-lg"
-                >
-                  Schedule a Technical Discussion
-                </Button>
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap size={24} className="text-yellow-400" />
+                  <h4 className="text-white font-bold text-lg">Open to Opportunities</h4>
+                  <Brain size={24} className="text-purple-400" />
+                </div>
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                    <div className="text-blue-400 font-semibold">Networking Roles</div>
+                    <div className="text-gray-300">Infrastructure & Security</div>
+                  </div>
+                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                    <div className="text-green-400 font-semibold">Technical Support</div>
+                    <div className="text-gray-300">Multi-domain Excellence</div>
+                  </div>
+                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                    <div className="text-purple-400 font-semibold">Entry-level AI</div>
+                    <div className="text-gray-300">Learning & Growing</div>
+                  </div>
+                  <div className="bg-slate-800/50 rounded-lg p-3 text-center">
+                    <div className="text-orange-400 font-semibold">Hybrid Roles</div>
+                    <div className="text-gray-300">Best of Both Worlds</div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Contact Form with glassmorphism */}
-          <Card className="bg-white/60 backdrop-blur-md border border-white/40 hover:border-blue-300/60 hover:bg-white/70 transition-all duration-300 shadow-lg">
+          {/* Contact Form */}
+          <Card className="bg-slate-800/60 backdrop-blur-md border border-slate-700/50 hover:border-slate-600 hover:bg-slate-700/60 transition-all duration-300 shadow-lg">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-slate-700 font-medium">Name *</Label>
+                    <Label htmlFor="name" className="text-gray-300 font-medium">Name *</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
+                      className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white focus:border-blue-400 focus:bg-slate-700/50 mt-1 shadow-sm"
                       placeholder="Your full name"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="email" className="text-slate-700 font-medium">Email *</Label>
+                    <Label htmlFor="email" className="text-gray-300 font-medium">Email *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -158,7 +173,7 @@ const ContactSection = ({ contactInfo }) => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
+                      className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white focus:border-blue-400 focus:bg-slate-700/50 mt-1 shadow-sm"
                       placeholder="your.email@company.com"
                     />
                   </div>
@@ -166,32 +181,32 @@ const ContactSection = ({ contactInfo }) => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="company" className="text-slate-700 font-medium">Company</Label>
+                    <Label htmlFor="company" className="text-gray-300 font-medium">Company</Label>
                     <Input
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
+                      className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white focus:border-blue-400 focus:bg-slate-700/50 mt-1 shadow-sm"
                       placeholder="Your company"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="role" className="text-slate-700 font-medium">Role</Label>
+                    <Label htmlFor="role" className="text-gray-300 font-medium">Role</Label>
                     <Input
                       id="role"
                       name="role"
                       value={formData.role}
                       onChange={handleChange}
-                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
+                      className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white focus:border-blue-400 focus:bg-slate-700/50 mt-1 shadow-sm"
                       placeholder="Your role/title"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <Label htmlFor="message" className="text-slate-700 font-medium">Message *</Label>
+                  <Label htmlFor="message" className="text-gray-300 font-medium">Message *</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -199,15 +214,15 @@ const ContactSection = ({ contactInfo }) => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 resize-none shadow-sm"
-                    placeholder="Tell me about your application support needs, technical challenges, or how we might collaborate..."
+                    className="bg-slate-800/50 backdrop-blur-sm border border-slate-600/50 text-white focus:border-blue-400 focus:bg-slate-700/50 mt-1 resize-none shadow-sm"
+                    placeholder="Tell me about the role, technical challenges, or how my versatile tech background might fit your team..."
                   />
                 </div>
                 
                 <Button
                   type="submit"
                   disabled={isSubmitting || isSubmitted}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105 shadow-lg border-0"
                 >
                   {isSubmitting ? (
                     <>

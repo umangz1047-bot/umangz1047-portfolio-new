@@ -1,46 +1,58 @@
 import React from 'react';
-import { Mail, Linkedin, MapPin, Heart } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Heart, Zap, Brain } from 'lucide-react';
 
 const Footer = ({ contactInfo }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-slate-100/50 to-slate-200/50 backdrop-blur-sm border-t border-white/40">
+    <footer className="bg-gradient-to-b from-slate-900 to-black border-t border-slate-700/50">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand Section with glassmorphism */}
+          {/* Brand Section */}
           <div className="space-y-4">
-            <div className="text-3xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Umang Patel
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                <Zap size={24} className="text-white" />
+              </div>
+              <div>
+                <div className="text-2xl font-black bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Umang Patel
+                </div>
+                <div className="text-lg font-semibold text-gray-300">
+                  Adaptable Technology Professional
+                </div>
+              </div>
             </div>
-            <div className="text-lg font-semibold text-slate-700 mb-2">
-              Application Support Engineer
-            </div>
-            <p className="text-slate-600 leading-relaxed">
-              Application Support Engineer driving customer success and operational excellence 
-              in the restaurant technology sector.
+            <p className="text-gray-400 leading-relaxed">
+              Versatile tech professional bridging networking expertise, technical support excellence, 
+              and emerging AI exploration for next-generation solutions.
             </p>
-            <div className="flex items-center gap-2 bg-emerald-50/70 backdrop-blur-sm border border-emerald-200/50 px-3 py-2 rounded-full text-emerald-700 shadow-sm">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-              Available for Application Support Opportunities
+            <div className="flex items-center gap-2 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-green-400 text-sm font-medium">Open to Opportunities</span>
+              </div>
+              <div className="h-4 w-px bg-slate-600"></div>
+              <Brain size={16} className="text-purple-400" />
+              <span className="text-purple-400 text-sm">AI Curious</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-slate-800">Quick Navigation</h3>
+            <h3 className="text-lg font-bold text-white">Quick Navigation</h3>
             <div className="grid grid-cols-2 gap-2">
               {[
                 { label: 'Skills', href: '#skills' },
                 { label: 'Experience', href: '#experience' },
-                { label: 'Achievements', href: '#achievements' },
+                { label: 'Journey', href: '#journey' },
                 { label: 'Education', href: '#education' },
                 { label: 'Contact', href: '#contact' }
               ].map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-slate-600 hover:text-blue-600 transition-colors font-medium text-sm cursor-pointer bg-white/40 backdrop-blur-sm border border-white/30 px-3 py-2 rounded-lg hover:bg-blue-50/50 hover:border-blue-200/50 shadow-sm"
+                  className="text-gray-400 hover:text-white transition-colors font-medium text-sm cursor-pointer bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 px-3 py-2 rounded-lg hover:bg-slate-700/40 hover:border-slate-600/40 shadow-sm"
                   onClick={(e) => {
                     e.preventDefault();
                     const element = document.querySelector(item.href);
@@ -55,55 +67,71 @@ const Footer = ({ contactInfo }) => {
             </div>
           </div>
 
-          {/* Contact Info with glassmorphism */}
+          {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-slate-800">Let's Connect</h3>
+            <h3 className="text-lg font-bold text-white">Let's Connect</h3>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 bg-white/40 backdrop-blur-sm border border-white/30 p-3 rounded-xl shadow-sm hover:bg-white/50 transition-colors">
-                <Mail size={18} className="text-blue-500" />
+              <div className="flex items-center gap-3 bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 p-3 rounded-xl shadow-sm hover:bg-slate-700/40 transition-colors">
+                <Mail size={18} className="text-blue-400" />
                 <a 
                   href={`mailto:${contactInfo.email}`}
-                  className="text-slate-600 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
                   {contactInfo.email}
                 </a>
               </div>
               
-              <div className="flex items-center gap-3 bg-white/40 backdrop-blur-sm border border-white/30 p-3 rounded-xl shadow-sm hover:bg-white/50 transition-colors">
-                <Linkedin size={18} className="text-blue-500" />
+              <div className="flex items-center gap-3 bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 p-3 rounded-xl shadow-sm hover:bg-slate-700/40 transition-colors">
+                <Linkedin size={18} className="text-blue-400" />
                 <a 
                   href={`https://${contactInfo.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-600 hover:text-blue-600 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
                   LinkedIn Profile
                 </a>
               </div>
               
-              <div className="flex items-center gap-3 bg-white/40 backdrop-blur-sm border border-white/30 p-3 rounded-xl shadow-sm">
-                <MapPin size={18} className="text-blue-500" />
-                <span className="text-slate-600 font-medium">{contactInfo.location}</span>
+              <div className="flex items-center gap-3 bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 p-3 rounded-xl shadow-sm">
+                <MapPin size={18} className="text-blue-400" />
+                <span className="text-gray-300 font-medium">{contactInfo.location}</span>
+              </div>
+            </div>
+
+            {/* Opportunity indicators */}
+            <div className="space-y-2">
+              <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wide">Open For</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-xs font-medium border border-blue-500/30">
+                  Networking Roles
+                </span>
+                <span className="bg-green-600/20 text-green-300 px-3 py-1 rounded-full text-xs font-medium border border-green-500/30">
+                  Technical Support
+                </span>
+                <span className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium border border-purple-500/30">
+                  Entry-level AI
+                </span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar with glassmorphism */}
-        <div className="border-t border-white/40 mt-12 pt-8">
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-700/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-slate-600 text-sm font-medium">
-              © {currentYear} Umang Patel - Application Support Engineer. All rights reserved.
+            <div className="text-gray-400 text-sm font-medium">
+              © {currentYear} Umang Patel - Adaptable Technology Professional. All rights reserved.
             </div>
             
-            <div className="flex items-center gap-2 text-slate-600 text-sm bg-white/40 backdrop-blur-sm border border-white/30 px-4 py-2 rounded-full shadow-sm">
+            <div className="flex items-center gap-2 text-gray-400 text-sm bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 px-4 py-2 rounded-full shadow-sm">
               <span>Built with</span>
               <Heart size={16} className="text-red-400 fill-current" />
-              <span>and cutting-edge technology</span>
+              <span>and future-focused technology</span>
             </div>
             
-            <div className="text-slate-600 text-sm font-medium bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/50 px-4 py-2 rounded-full shadow-sm">
-              <span className="text-blue-600 font-semibold">TouchBistro</span> • Application Support Excellence
+            <div className="text-gray-400 text-sm font-medium bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 px-4 py-2 rounded-full shadow-sm">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent font-semibold">Ready for What's Next</span>
             </div>
           </div>
         </div>
