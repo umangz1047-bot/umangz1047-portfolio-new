@@ -60,97 +60,97 @@ const ContactSection = ({ contactInfo }) => {
   };
 
   return (
-    <section className="py-20 bg-black" id="contact">
+    <section className="py-20 bg-gradient-to-b from-purple-50/30 to-slate-100/50" id="contact">
       <div className="container mx-auto px-6">
-        {/* Netflix-style section header */}
+        {/* Glassmorphism section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-black text-white mb-4">Watch Next: Let's Connect</h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to elevate your operations with Netflix-worthy Application Support excellence? Let's start the conversation.
+          <h2 className="text-4xl font-black text-slate-800 mb-4">Let's Connect</h2>
+          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+            Ready to discuss how my application support expertise can benefit your team? Let's start the conversation.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
+          {/* Contact Info with glassmorphism */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                Whether you're looking for a strategic partner, technical leader, or customer success innovator, 
-                I'm here to discuss how we can create transformative outcomes together.
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Get in Touch</h3>
+              <p className="text-slate-600 mb-8 leading-relaxed">
+                Whether you're looking for an experienced Application Support Engineer, technical problem solver, or customer success expert, 
+                I'm here to discuss how we can create exceptional outcomes together.
               </p>
             </div>
 
-            {/* Contact details */}
+            {/* Contact details with glassmorphism */}
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm border border-white/40 p-4 rounded-2xl shadow-sm">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Mail size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-gray-400 text-sm">Email</div>
-                  <div className="text-white font-semibold">{contactInfo.email}</div>
+                  <div className="text-slate-500 text-sm font-medium">Email</div>
+                  <div className="text-slate-800 font-semibold">{contactInfo.email}</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm border border-white/40 p-4 rounded-2xl shadow-sm">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                   <Linkedin size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-gray-400 text-sm">LinkedIn</div>
-                  <div className="text-white font-semibold">{contactInfo.linkedin}</div>
+                  <div className="text-slate-500 text-sm font-medium">LinkedIn</div>
+                  <div className="text-slate-800 font-semibold">Professional Profile</div>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
+              <div className="flex items-center gap-4 bg-white/50 backdrop-blur-sm border border-white/40 p-4 rounded-2xl shadow-sm">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                   <MapPin size={24} className="text-white" />
                 </div>
                 <div>
-                  <div className="text-gray-400 text-sm">Location</div>
-                  <div className="text-white font-semibold">{contactInfo.location}</div>
+                  <div className="text-slate-500 text-sm font-medium">Location</div>
+                  <div className="text-slate-800 font-semibold">{contactInfo.location}</div>
                 </div>
               </div>
             </div>
 
-            {/* Call to action box */}
-            <Card className="bg-red-600 border-red-600">
+            {/* Call to action box with glassmorphism */}
+            <Card className="bg-gradient-to-br from-blue-500/90 to-indigo-600/90 backdrop-blur-sm border border-blue-400/30 shadow-xl">
               <CardContent className="p-6">
-                <h4 className="text-white font-bold text-lg mb-2">Ready for a Consultation?</h4>
-                <p className="text-red-100 mb-4">Let's discuss your technical operations challenges and growth opportunities.</p>
+                <h4 className="text-white font-bold text-lg mb-2">Ready for Application Support Excellence?</h4>
+                <p className="text-blue-100 mb-4">Let's discuss your technical challenges and growth opportunities.</p>
                 <Button 
                   variant="secondary" 
-                  className="bg-white text-red-600 hover:bg-gray-100 font-semibold w-full"
+                  className="bg-white/90 backdrop-blur-sm text-blue-700 hover:bg-white font-semibold w-full shadow-lg"
                 >
-                  Schedule a Strategy Session
+                  Schedule a Technical Discussion
                 </Button>
               </CardContent>
             </Card>
           </div>
 
-          {/* Contact Form */}
-          <Card className="bg-gray-900 border-gray-800 hover:border-red-600 transition-all duration-300">
+          {/* Contact Form with glassmorphism */}
+          <Card className="bg-white/60 backdrop-blur-md border border-white/40 hover:border-blue-300/60 hover:bg-white/70 transition-all duration-300 shadow-lg">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Send a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-gray-300">Name *</Label>
+                    <Label htmlFor="name" className="text-slate-700 font-medium">Name *</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-gray-800 border-gray-700 text-white focus:border-red-600 mt-1"
+                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
                       placeholder="Your full name"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="email" className="text-gray-300">Email *</Label>
+                    <Label htmlFor="email" className="text-slate-700 font-medium">Email *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -158,7 +158,7 @@ const ContactSection = ({ contactInfo }) => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-gray-800 border-gray-700 text-white focus:border-red-600 mt-1"
+                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
                       placeholder="your.email@company.com"
                     />
                   </div>
@@ -166,32 +166,32 @@ const ContactSection = ({ contactInfo }) => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="company" className="text-gray-300">Company</Label>
+                    <Label htmlFor="company" className="text-slate-700 font-medium">Company</Label>
                     <Input
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="bg-gray-800 border-gray-700 text-white focus:border-red-600 mt-1"
+                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
                       placeholder="Your company"
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="role" className="text-gray-300">Role</Label>
+                    <Label htmlFor="role" className="text-slate-700 font-medium">Role</Label>
                     <Input
                       id="role"
                       name="role"
                       value={formData.role}
                       onChange={handleChange}
-                      className="bg-gray-800 border-gray-700 text-white focus:border-red-600 mt-1"
+                      className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 shadow-sm"
                       placeholder="Your role/title"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <Label htmlFor="message" className="text-gray-300">Message *</Label>
+                  <Label htmlFor="message" className="text-slate-700 font-medium">Message *</Label>
                   <Textarea
                     id="message"
                     name="message"
@@ -199,15 +199,15 @@ const ContactSection = ({ contactInfo }) => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="bg-gray-800 border-gray-700 text-white focus:border-red-600 mt-1 resize-none"
-                    placeholder="Tell me about your technical operations challenges, growth opportunities, or how we might collaborate..."
+                    className="bg-white/50 backdrop-blur-sm border border-slate-300/50 text-slate-800 focus:border-blue-400 focus:bg-white/70 mt-1 resize-none shadow-sm"
+                    placeholder="Tell me about your application support needs, technical challenges, or how we might collaborate..."
                   />
                 </div>
                 
                 <Button
                   type="submit"
                   disabled={isSubmitting || isSubmitted}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   {isSubmitting ? (
                     <>
