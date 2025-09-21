@@ -11,10 +11,10 @@ const iconMap = {
   TrendingUp
 };
 
-const SkillsCarousel = ({ skills }) => {
+const SkillsCarousel = ({ coreCompetencies }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerView = 3;
-  const maxIndex = Math.max(0, skills.length - itemsPerView);
+  const maxIndex = Math.max(0, coreCompetencies.length - itemsPerView);
 
   const nextSlide = () => {
     setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
@@ -30,8 +30,8 @@ const SkillsCarousel = ({ skills }) => {
         {/* Glassmorphism section header */}
         <div className="flex items-center justify-between mb-12">
           <div>
-            <h2 className="text-4xl font-black text-slate-800 mb-2">Featured Skills</h2>
-            <p className="text-slate-600 text-lg">Core competencies that drive technical excellence</p>
+            <h2 className="text-4xl font-black text-slate-800 mb-2">Core Competencies</h2>
+            <p className="text-slate-600 text-lg">Key strengths that drive application support excellence</p>
           </div>
           
           <div className="flex gap-2">
@@ -62,7 +62,7 @@ const SkillsCarousel = ({ skills }) => {
             className="flex transition-transform duration-500 ease-in-out gap-6"
             style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
           >
-            {skills.map((skill) => {
+            {coreCompetencies.map((skill) => {
               const IconComponent = iconMap[skill.icon];
               return (
                 <div key={skill.id} className="min-w-0 flex-shrink-0" style={{ width: `${100 / itemsPerView}%` }}>

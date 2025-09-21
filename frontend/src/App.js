@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import HeroSection from "./components/HeroSection";
 import SkillsCarousel from "./components/SkillsCarousel";
+import SkillsSection from "./components/SkillsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import SpotlightSection from "./components/SpotlightSection";
 import EducationSection from "./components/EducationSection";
@@ -23,8 +24,12 @@ function App() {
             <HeroSection data={portfolioData.hero} />
           </section>
           
+          <section id="core-competencies">
+            <SkillsCarousel coreCompetencies={portfolioData.coreCompetencies} />
+          </section>
+          
           <section id="skills">
-            <SkillsCarousel skills={portfolioData.skills} />
+            <SkillsSection skills={portfolioData.skills} />
           </section>
           
           <section id="experience">

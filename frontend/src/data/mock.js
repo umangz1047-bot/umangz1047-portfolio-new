@@ -10,7 +10,116 @@ export const portfolioData = {
     location: "Toronto, Ontario, Canada"
   },
   
-  skills: [
+  skills: {
+    technical: [
+      {
+        id: 1,
+        name: "MySQL",
+        level: "Advanced",
+        icon: "Database",
+        description: "Database management and optimization for application support"
+      },
+      {
+        id: 2,
+        name: "Python",
+        level: "Basic",
+        icon: "Code",
+        description: "Scripting and automation for support workflows"
+      },
+      {
+        id: 3,
+        name: "Swift",
+        level: "Basic",
+        icon: "Smartphone",
+        description: "Mobile application development and troubleshooting"
+      }
+    ],
+    networking: [
+      {
+        id: 1,
+        name: "Troubleshooting routers and switches",
+        level: "Expert",
+        icon: "Router",
+        description: "Hardware diagnostics and network infrastructure support"
+      },
+      {
+        id: 2,
+        name: "Understanding of network protocols",
+        level: "Advanced",
+        icon: "Network",
+        description: "TCP/IP, HTTP/HTTPS, DNS, and application layer protocols"
+      },
+      {
+        id: 3,
+        name: "IP addressing",
+        level: "Advanced",
+        icon: "Globe",
+        description: "IPv4/IPv6 addressing, subnetting, and network configuration"
+      }
+    ],
+    analytical: [
+      {
+        id: 1,
+        name: "Data analysis",
+        level: "Advanced",
+        icon: "BarChart3",
+        description: "Performance metrics analysis and trend identification"
+      },
+      {
+        id: 2,
+        name: "Problem-solving",
+        level: "Expert",
+        icon: "Lightbulb",
+        description: "Complex technical issue resolution and root cause analysis"
+      },
+      {
+        id: 3,
+        name: "Critical thinking",
+        level: "Advanced",
+        icon: "Brain",
+        description: "Strategic approach to application support challenges"
+      },
+      {
+        id: 4,
+        name: "Pattern recognition",
+        level: "Advanced",
+        icon: "Search",
+        description: "Identifying recurring issues and optimization opportunities"
+      }
+    ],
+    soft: [
+      {
+        id: 1,
+        name: "Communication",
+        level: "Expert",
+        icon: "MessageCircle",
+        description: "Clear technical explanations to diverse stakeholders"
+      },
+      {
+        id: 2,
+        name: "Decision making",
+        level: "Advanced",
+        icon: "Target",
+        description: "Quick, informed decisions in high-pressure support scenarios"
+      },
+      {
+        id: 3,
+        name: "Conflict resolution",
+        level: "Advanced",
+        icon: "Users",
+        description: "Managing customer escalations and team dynamics"
+      },
+      {
+        id: 4,
+        name: "Teamwork",
+        level: "Expert",
+        icon: "UsersIcon",
+        description: "Collaborative support and cross-functional project work"
+      }
+    ]
+  },
+
+  coreCompetencies: [
     {
       id: 1,
       title: "Application Support Excellence",
@@ -146,17 +255,44 @@ export const portfolioData = {
     {
       id: 1,
       institution: "George Brown College",
-      degree: "Postgraduate Certificate",
-      field: "Wireless Networking and System Security Analysis",
+      degree: "Certificate",
+      field: "Network System And Security Analysis",
       period: "2019-2020",
       location: "Toronto, Ontario",
-      coursework: [
-        "Network Security Architecture",
-        "Wireless Communication Systems",
-        "Cybersecurity Risk Assessment",
-        "System Administration & Management",
-        "Enterprise Network Design"
-      ]
+      type: "technical",
+      specializations: [
+        "Ethical hacking",
+        "Pentesting"
+      ],
+      relevance: "Application security assessment and vulnerability analysis"
+    },
+    {
+      id: 2,
+      institution: "George Brown College", 
+      degree: "Certificate",
+      field: "Wireless Networking",
+      period: "2019-2020",
+      location: "Toronto, Ontario",
+      type: "technical",
+      specializations: [
+        "Configuring Network",
+        "Data communication"
+      ],
+      relevance: "Network infrastructure support for application deployment"
+    },
+    {
+      id: 3,
+      institution: "Babaria Institute of Technology",
+      degree: "Bachelor of Engineering",
+      field: "Computer Science And Engineering",
+      period: "2015-2019",
+      location: "Gujarat, India",
+      type: "degree",
+      specializations: [
+        "Computer Graphics and Image Processing",
+        "DBMS & Basic Programming"
+      ],
+      relevance: "Foundation in software engineering and database management"
     }
   ],
 
